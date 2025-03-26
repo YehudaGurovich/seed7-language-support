@@ -49,7 +49,7 @@
 - **Current Version:** 0.0.1  
   This version introduces basic syntax highlighting, theme support, and Code Runner integration for Seed7.
 - Future versions will add additional keyword support and improvements.  
-  Check the [CHANGELOG](CHANGELOG.md) (if provided) for detailed release notes.
+  Check the [CHANGELOG](CHANGELOG.md) for detailed release notes.
 
 ## Installation
 
