@@ -89,8 +89,8 @@
 
 ## Contributing
 
-Contributions and feedback are welcome! Please open an issue or submit a pull request on [GitHub](https://github.com/yourusername/seed7-language-support).
+Contributions and feedback are welcome! Please open an issue or submit a pull request on [GitHub](https://github.com/YehudaGurovich/seed7-language-support).
 
 ## License
 
-[MIT License](LICENSE)
+[MIT License](LICENSE.txt)
