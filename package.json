@@ -1,0 +1,52 @@
+{
+  "name": "seed7-language-support",
+  "displayName": "Seed7 Language Support",
+  "description": "Provides syntax highlighting and default theme settings for Seed7 (.sd7) files.",
+  "version": "0.0.1",
+  "publisher": "YehudaGurovich",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "extensionDependencies": [
+    "formulahendry.code-runner"
+  ],
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "seed7",
+        "extensions": [
+          ".sd7"
+        ],
+        "aliases": [
+          "Seed7",
+          "seed7"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "seed7",
+        "scopeName": "source.seed7",
+        "path": "./syntaxes/seed7.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "Seed7 Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/seed7-color-theme.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "seed7.removeSettings",
+        "title": "Seed7: Remove Settings"
+      }
+    ]
+  }
+}

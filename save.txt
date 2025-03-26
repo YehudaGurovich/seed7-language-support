@@ -1,0 +1,88 @@
+"configurationDefaults": {
+      "[seed7]": {
+        "editor.tokenColorCustomizations": {
+          "textMateRules": [
+            {
+              "scope": "meta.preprocessor.seed7",
+              "settings": {
+                "foreground": "#7aa2f7"
+              }
+            },
+            {
+              "scope": "keyword.control.preprocessor.seed7",
+              "settings": {
+                "foreground": "#7aa2f7",
+                "fontStyle": "bold"
+              }
+            },
+            {
+              "scope": "comment.line.number-sign.seed7, comment.block.seed7",
+              "settings": {
+                "foreground": "#7e8294",
+                "fontStyle": "italic"
+              }
+            },
+            {
+              "scope": "keyword.control.seed7",
+              "settings": {
+                "foreground": "#7aa2f7"
+              }
+            },
+            {
+              "scope": "keyword.block.delimiter.seed7",
+              "settings": {
+                "foreground": "#bb9af7"
+              }
+            },
+            {
+              "scope": "storage.type.seed7",
+              "settings": {
+                "foreground": "#9ece6a"
+              }
+            },
+            {
+              "scope": "punctuation.definition.array.seed7, punctuation.definition.braces.seed7",
+              "settings": {
+                "foreground": "#565f89"
+              }
+            },
+            {
+              "scope": "string.quoted.double.seed7",
+              "settings": {
+                "foreground": "#e0af68"
+              }
+            },
+            {
+              "scope": "constant.character.escape.seed7",
+              "settings": {
+                "foreground": "#f7768e"
+              }
+            },
+            {
+              "scope": "keyword.operator.seed7",
+              "settings": {
+                "foreground": "#7aa2f7"
+              }
+            },
+            {
+              "scope": "support.function.builtin.seed7",
+              "settings": {
+                "foreground": "#bb9af7"
+              }
+            },
+            {
+              "scope": "meta.function.user.seed7",
+              "settings": {
+                "foreground": "#bb9af7"
+              }
+            },
+            {
+              "scope": "variable.other.seed7",
+              "settings": {
+                "foreground": "#7aa2f7"
+              }
+            }
+          ]
+        }
+      }
+    }
