@@ -36,21 +36,34 @@ function activate(context) {
 }
 
 function updateUserSettings() {
-  // Access the Code Runner configuration.
-  const config = vscode.workspace.getConfiguration('code-runner');
+  // Update Code Runner settings.
+  const codeRunnerConfig = vscode.workspace.getConfiguration('code-runner');
   
-  // Deep clone the current executor map.
-  const executorMap = JSON.parse(JSON.stringify(config.get('executorMapByFileExtension') || {}));
+  // Update additional Code Runner settings.
+  codeRunnerConfig.update('clearPreviousOutput', true, vscode.ConfigurationTarget.Global);
+  codeRunnerConfig.update('saveAllFilesBeforeRun', true, vscode.ConfigurationTarget.Global);
+  codeRunnerConfig.update('runInTerminal', true, vscode.ConfigurationTarget.Global);
 
+  // Deep clone the current executor map.
+  const executorMap = JSON.parse(JSON.stringify(codeRunnerConfig.get('executorMapByFileExtension') || {}));
   // Update or add only the .sd7 entry while preserving all other keys.
   executorMap[".sd7"] = "s7c $fileName; & \".\\$([System.IO.Path]::GetFileNameWithoutExtension(\"$fileName\")).exe\"";
-
-  // Write the updated executor map back to the global settings.
-  config.update('executorMapByFileExtension', executorMap, vscode.ConfigurationTarget.Global)
+  codeRunnerConfig.update('executorMapByFileExtension', executorMap, vscode.ConfigurationTarget.Global)
     .then(() => {
       vscode.window.showInformationMessage("Seed7 Code Runner settings have been added to your settings.");
     }, (error) => {
-      vscode.window.showErrorMessage("Error updating settings: " + error);
+      vscode.window.showErrorMessage("Error updating code-runner settings: " + error);
+    });
+
+  // Update Files associations.
+  const filesConfig = vscode.workspace.getConfiguration('files');
+  const fileAssociations = JSON.parse(JSON.stringify(filesConfig.get('associations') || {}));
+  fileAssociations["*.sd7"] = "Seed7";
+  filesConfig.update('associations', fileAssociations, vscode.ConfigurationTarget.Global)
+    .then(() => {
+      vscode.window.showInformationMessage("File associations for Seed7 have been added.");
+    }, (error) => {
+      vscode.window.showErrorMessage("Error updating file associations: " + error);
     });
 }
 
