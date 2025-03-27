@@ -1542,6 +1542,28 @@
 			}
 		},
     {
+      "name": "Seed7 Variable Declarations",
+      "scope": "meta.var-type.singleword.seed7",
+      "settings": {
+        "foreground": "#BB9AF7"
+      }
+    },
+    {
+      "name": "Seed7 Constant Declarations",
+      "scope": "meta.const-type.singleword.seed7",
+      "settings": {
+        "foreground": "#BB9AF7"
+      }
+    },
+    {
+      "name": "Seed7 User Functions",
+      "scope": "meta.function.user.seed7",
+      "settings": {
+        "foreground": "#0DB9D7"
+      }
+
+    },
+    {
       "name": "Seed7 Keyword Declarations",
       "scope": "keyword.declaration.seed7",
       "settings": {

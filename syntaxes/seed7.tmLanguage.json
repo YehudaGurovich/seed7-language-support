@@ -33,8 +33,16 @@
 			"match": "\\b(const|var)\\b"
 		},
 		{
+			"name": "meta.var-type.singleword.seed7",
+			"match": "(?<=\\bvar\\s+)([a-zA-Z_][a-zA-Z0-9_]*)(?=\\s*:)"
+		},
+		{
+			"name": "meta.const-type.singleword.seed7",
+			"match": "(?<=\\bconst\\s+)(?!(?:proc|func)\\b)([a-zA-Z_][a-zA-Z0-9_]*)(?=\\s*:)"
+		},
+		{
 			"name": "keyword.block.delimiter.seed7",
-			"match": "\\b(local|begin|end)\\b"
+			"match": "\\b(result|local|begin|end|return)\\b"
 		},
 		{
 			"name": "keyword.control.seed7",
