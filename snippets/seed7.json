@@ -5,8 +5,10 @@
 			"$ include \"seed7_05.s7i\";",
 			"",
 			"const proc: main is func",
-			"  begin",
+			"  local",
 			"    $0",
+			"  begin",
+			"    $1",
 			"  end func;"
 		],
 		"description": "Basic Seed7 program structure"
@@ -16,9 +18,11 @@
 		"body": [
 			"const func $1: $2($3) is func",
 			"  result",
-			"    var $3: $4 is $5;",
-			"  begin",
+			"    var $1: res is $5;",
+			"  local",
 			"    $0",
+			"  begin",
+			"",
 			"  end func;"
 		],
 		"description": "Declare a function"
@@ -31,6 +35,19 @@
 			"end if;"
 		],
 		"description": "If statement"
+	},
+	"If Elsif Else Statement": {
+		"prefix": "elseif",
+		"body": [
+			"if $0 then",
+			"  $1",
+			"elsif $2 then",
+			"  $3",
+			"else",
+			"  $4",
+			"end if;"
+		],
+		"description": "If-ElseIf statement"
 	},
 	"If Else Statement": {
 		"prefix": "ifelse",
@@ -47,7 +64,7 @@
 		"prefix": "case",
 		"body": [
 			"case $1 of",
-			"when $2 :",
+			"when {$2} :",
 			"  $0",
 			"otherwise:",
 			"end case;"
@@ -66,7 +83,7 @@
 	"For Loop": {
 		"prefix": "for",
 		"body": [
-			"for $1 in $2 do",
+			"for $1 range $2 do",
 			"  $0",
 			"end for;"
 		],
