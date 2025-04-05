@@ -24,6 +24,18 @@ function activate(context) {
       delete executorMap[".sd7"];
       await config.update('executorMapByFileExtension', executorMap, vscode.ConfigurationTarget.Global);
     }
+    if (executorMap[".s7i"]) {
+      delete executorMap[".s7i"];
+      await config.update('executorMapByFileExtension', executorMap, vscode.ConfigurationTarget.Global);
+    }
+    if (fileAssociations["*.sd7"]) {
+      delete fileAssociations["*.sd7"];
+      await config.update('associations', fileAssociations, vscode.ConfigurationTarget.Global);
+    }
+    if (fileAssociations["*.s7i"]) {
+      delete fileAssociations["*.s7i"];
+      await config.update('associations', fileAssociations, vscode.ConfigurationTarget.Global);
+    }
 
     vscode.window.showInformationMessage("Seed7 settings have been removed from your user settings.");
   });
