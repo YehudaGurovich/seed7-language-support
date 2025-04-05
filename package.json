@@ -16,14 +16,17 @@
   ],
   "main": "./extension.js",
   "activationEvents": [
-    "*"
+    "onStartupFinished",
+    "workspaceContains:**/*.sd7",
+    "workspaceContains:**/*.s7i"
   ],
   "contributes": {
     "languages": [
       {
         "id": "seed7",
         "extensions": [
-          ".sd7"
+          ".sd7",
+          ".s7i"
         ],
         "aliases": [
           "Seed7",
@@ -50,6 +53,12 @@
       {
         "command": "seed7.removeSettings",
         "title": "Seed7: Remove Settings"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "seed7",
+        "path": "./snippets/seed7.json"
       }
     ]
   }
