@@ -1,13 +1,17 @@
 # Seed7 Language Support
 
-**Seed7 Language Support** provides syntax highlighting, a custom theme based on Tokyo Night Dark, and integration with Code Runner for Seed7 (`.sd7`) files.
+**Seed7 Language Support** provides syntax highlighting for Seed7 code, a custom theme, and integration with Code Runner for running Seed7 files in Visual Studio Code, including support for the `.sd7` and `.s7i` file extensions.
 
-> **Current Version:** 0.0.1
+> **Current Version:** 0.0.2
 
 ## Features
 
 - **Syntax Highlighting:**  
-  Enhanced syntax highlighting for Seed7 code, with support for many—but not yet all—keywords.
+  Enhanced syntax highlighting for Seed7 code, with support for many keywords.
+
+- **Snippets:**  
+  Basic Seed7 code snippets are included to speed up your workflow.
+  (Make sure "editor.snippetSuggestions": "top" is set for the best experience - see below.)
 
 - **Custom Theme:**  
   A full theme based on Tokyo Night Dark, with custom token colors specifically for Seed7.
@@ -22,7 +26,24 @@
     - `runInTerminal: true`
 
 - **File Associations:**  
-  Associates files with the `.sd7` extension to the Seed7 language.
+  Associates files with the `.sd7` or `.s7i` extension with the Seed7 language mode.
+  This allows for proper syntax highlighting and language features.
+
+- **Smart Workspace Setup (Optional):**
+  When you create a `.sd7` or `.s7i` file, this extension will automatically detect if your project lacks a `.vscode/` folder, and offer to create a basic `.vscode/settings.json` file for you.
+
+  If accepted, the file will include:
+
+  ```json
+  {
+    "editor.snippetSuggestions": "top"
+  }
+  ```
+
+  This ensures that Seed7 snippets appear at the top of VS Code’s IntelliSense suggestions for a smoother coding experience.
+
+  > :warning: If you decline, we’ll ask again only a few more times, just in case you change your mind.
+  > :exclamation: This change only affects the current workspace, not your global VS Code settings.
 
 - **Cleanup Command:**  
   Provides a command to remove Seed7-specific settings from the user’s configuration if needed.
@@ -39,16 +60,15 @@
   Please note that you must download the Seed7 compiler separately from the official [Seed7 website](http://seed7.sourceforge.net/) as it is not bundled with this extension.
 
 - **Code Runner Settings Display:**  
-  Although this extension only adds a custom executor for `.sd7` files, the Code Runner settings in the VS Code settings editor will display the complete merged configuration (including the default mappings for other file types). This is expected behavior and does not mean that the extension is overwriting other settings.
+  This extension only adds a custom executor for `.sd7` files and file associations for both `.sd7` and `.s7i` files. The Code Runner settings panel in the general `settings.json` will show a merged view of all settings, including defaults for other languages. This is expected behavior.
 
 - **Development Status:**  
   This extension is still in development. Not all Seed7 keywords are supported yet, and improvements are actively being worked on.
 
 ## Version Details
 
-- **Current Version:** 0.0.1  
-  This version introduces basic syntax highlighting, theme support, and Code Runner integration for Seed7.
-- Future versions will add additional keyword support and improvements.  
+- **Current Version:** 0.0.2
+  This version adds more keywords to the syntax highlighting, support for the `.s7i` file extension, and basic snippet support.  
   Check the [CHANGELOG](CHANGELOG.md) for detailed release notes.
 
 ## Installation
@@ -59,13 +79,14 @@
 ## Usage
 
 - **Editing Seed7 Files:**  
-  Open any file with the `.sd7` extension to see enhanced syntax highlighting and the custom theme if selected.
+  Open any file with the `.sd7` or `.s7i` extension to start using the Seed7 syntax highlighting, snippets, and the custom theme if selected.
 
 - **Selecting the Theme:**  
   Press `Ctrl+K Ctrl+T` (or use **Preferences: Color Theme**) and select **Seed7 Dark** to use the custom theme.
 
 - **Running Code:**  
-  Code Runner is configured to compile and then execute Seed7 files using your custom command. Use Code Runner's commands to run your code.
+  Code Runner is configured to compile and then execute Seed7 files using your custom command. Use Code Runner's run button or the shortcut `Ctrl+Alt+N` to run your Seed7 code.
+  You can still run the code using the terminal through the command `s7c` or `s7` followed by the file name.
 
 ## Commands
 
