@@ -16,16 +16,27 @@
 	"Function Declaration": {
 		"prefix": "func",
 		"body": [
-			"const func $1: $2($3) is func",
+			"const func $1: $2 is func",
 			"  result",
-			"    var $1: res is $5;",
-			"  local",
+			"    var $1: res is $3;",
+			"#$4  local",
 			"    $0",
 			"  begin",
 			"",
 			"  end func;"
 		],
 		"description": "Declare a function"
+	},
+	"Procedure Declaration": {
+		"prefix": "proc",
+		"body": [
+			"const proc: $1 is func",
+			"#$2  local",
+			"    $0",
+			"  begin",
+			"",
+			"  end func;"
+		]
 	},
 	"If Statement": {
 		"prefix": "if",
@@ -64,7 +75,7 @@
 		"prefix": "case",
 		"body": [
 			"case $1 of",
-			"when {$2} :",
+			"when {$2}:",
 			"  $0",
 			"otherwise:",
 			"end case;"
