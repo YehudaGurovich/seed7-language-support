@@ -64,7 +64,7 @@
 - **`wln`**: Inserts a `writeln` statement template for outputting text to the console.
 - **`rln`**: Inserts a `readln` statement template for reading input from the console.
 - **`array`**: Inserts a default array declaration template.
-- **`array0`**: Inserts a zero-based array declaration template.
+- **`arr0`**: Inserts a zero-based array declaration template.
 
 ## Disclaimer
 
