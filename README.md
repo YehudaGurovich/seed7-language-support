@@ -48,6 +48,24 @@
 - **Cleanup Command:**  
   Provides a command to remove Seed7-specific settings from the user’s configuration if needed.
 
+## Available Snippets
+
+- **`main`**: Inserts a basic Seed7 program structure with a `main` function.
+- **`func`**: Inserts a function definition template.
+- **`proc`**: Inserts a procedure definition template.
+- **`if`**: Inserts an `if` statement template.
+- **`elseif`**: Inserts an `if-elsif-else` statement template.
+- **`ifelse`**: Inserts an `if-else` statement template.
+- **`case`**: Inserts a `case` statement template.
+- **`while`**: Inserts a `while` loop template.
+- **`for`**: Inserts a `for` loop template.
+- **`const`**: Inserts a constant variable declaration template.
+- **`var`**: Inserts a variable declaration template.
+- **`wln`**: Inserts a `writeln` statement template for outputting text to the console.
+- **`rln`**: Inserts a `readln` statement template for reading input from the console.
+- **`array`**: Inserts a default array declaration template.
+- **`array0`**: Inserts a zero-based array declaration template.
+
 ## Disclaimer
 
 - **Compilation vs. Interpretation:**  
