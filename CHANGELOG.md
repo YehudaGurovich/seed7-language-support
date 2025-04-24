@@ -42,3 +42,9 @@ All notable changes to the "Seed7" extension will be documented in this file.
 - Changed the snippet for `func` to have commented `local` block by default, since not all functions have local variables. This way, the user can uncomment it if needed.
 - Changed the snippet for `main` to point first to the newly commented `local` block, since not all main functions have local variables. And then point to the begin block. It was the other way around before. The user can uncomment the `local` block if needed.
 - Changed many snippets to end correctly and not outside of the snippet itself.
+
+## [0.1.1] - 2025-24-04
+
+### Quick Fix
+
+- Added the `\\b` to the regex for the keywords `not`, `and` and `or` to avoid matching other words that contain these keywords.
