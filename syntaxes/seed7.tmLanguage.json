@@ -92,7 +92,7 @@
 		},
 		{
 			"name": "keyword.operator.seed7",
-			"match": "(not|and|or|=|<>|<|>|<=|>=|:=|\\+:=|\\-:=|\\*:=|/:=|<&|&|&:=|\\+|\\*|\\-|/|\\bdiv\\b|\\bis\\b|\\bto\\b|\\bdownto\\b|\\bnot\\b|\\bin\\b|\\binout\\b|\\bref\\b|\\.\\.)"
+			"match": "(\\bnot\\b|\\band\\b|\\bor\\b|=|<>|<|>|<=|>=|:=|\\+:=|\\-:=|\\*:=|/:=|<&|&|&:=|\\+|\\*|\\-|/|\\bdiv\\b|\\bis\\b|\\bto\\b|\\bdownto\\b|\\bnot\\b|\\bin\\b|\\binout\\b|\\bref\\b|\\.\\.)"
 		},
 		{
 			"name": "keyword.operator.ternary.seed7",
