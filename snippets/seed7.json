@@ -115,17 +115,29 @@
 		"description": "Declare a variable"
 	},
 	"Write Statement": {
-		"prefix": "write",
+		"prefix": "wln",
 		"body": [
 			"writeln($1);"
 		],
 		"description": "Write output to console"
 	},
 	"Read Statement": {
-		"prefix": "read",
+		"prefix": "rln",
 		"body": [
 			"readln($1);"
 		],
 		"description": "Read input from console"
+	},
+	"Array starting on 1 declaration": {
+		"prefix": "array",
+		"body": [
+			"var array $1: $2 is ($3);"
+		]
+	},
+	"Array starting on 0 declaration": {
+		"prefix": "array0",
+		"body": [
+			"var array $1: $2 is [0] ($3);"
+		]
 	}
 }
