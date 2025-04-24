@@ -25,3 +25,20 @@ All notable changes to the "Seed7" extension will be documented in this file.
 ### Fixed
 
 - Fixed the deletion functionality to remove data from settings.json correctly
+
+## [0.1.0] - 2025-24-04
+
+### Added
+
+- Added snippets for array declarations.
+- Added snippet for `proc` keyword.
+- Added syntax highlighting for datatype for array declaration.
+
+### Changed
+
+- Changed snippet keyword from `write` to `wln` to avoid confusion with the `write` function in Seed7.
+- Changed the snippet keyword from `read` to `rln` to avoid confusion with the `read` function in Seed7.
+- Changed the snippet for `func` to not have the () brackets in the snippet by default, since not all functions have arguments. This way, the user can add them if needed.
+- Changed the snippet for `func` to have commented `local` block by default, since not all functions have local variables. This way, the user can uncomment it if needed.
+- Changed the snippet for `main` to point first to the newly commented `local` block, since not all main functions have local variables. And then point to the begin block. It was the other way around before. The user can uncomment the `local` block if needed.
+- Changed many snippets to end correctly and not outside of the snippet itself.
