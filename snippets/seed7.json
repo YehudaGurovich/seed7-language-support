@@ -5,10 +5,10 @@
 			"$ include \"seed7_05.s7i\";",
 			"",
 			"const proc: main is func",
-			"  local",
-			"    $0",
+			"#$1  local",
+			"    $2",
 			"  begin",
-			"    $1",
+			"    $0",
 			"  end func;"
 		],
 		"description": "Basic Seed7 program structure"
@@ -103,41 +103,41 @@
 	"Const Declaration": {
 		"prefix": "const",
 		"body": [
-			"const $1: $2 is $3;"
+			"const $1: $2 is $0;"
 		],
 		"description": "Declare a constant"
 	},
 	"Var Declaration": {
 		"prefix": "var",
 		"body": [
-			"var $1: $2 is $3;"
+			"var $1: $2 is $0;"
 		],
 		"description": "Declare a variable"
 	},
 	"Write Statement": {
 		"prefix": "wln",
 		"body": [
-			"writeln($1);"
+			"writeln($0);"
 		],
 		"description": "Write output to console"
 	},
 	"Read Statement": {
 		"prefix": "rln",
 		"body": [
-			"readln($1);"
+			"readln($0);"
 		],
 		"description": "Read input from console"
 	},
 	"Array starting on 1 declaration": {
 		"prefix": "array",
 		"body": [
-			"var array $1: $2 is ($3);"
+			"var array $1: $2 is ($0);"
 		]
 	},
 	"Array starting on 0 declaration": {
-		"prefix": "array0",
+		"prefix": "arr0",
 		"body": [
-			"var array $1: $2 is [0] ($3);"
+			"var array $1: $2 is [0] ($0);"
 		]
 	}
 }
