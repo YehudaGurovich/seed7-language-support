@@ -4,16 +4,30 @@ let promptCount = 0;
 const MAX_PROMPTS = 3;
 
 function activate(context) {
-  // Code Runner support prompt
-  vscode.window.showInformationMessage(
-    "Would you like to update your settings for Seed7 Code Runner support?",
-    "Yes",
-    "No"
-  ).then(answer => {
-    if (answer === "Yes") {
-      updateUserSettings();
-    }
-  });
+  // Check if we have already asked the user or if they've said no
+  let askCount = context.globalState.get('seed7.askCount', 0);
+  let userSaidNo = context.globalState.get('seed7.userSaidNo', false);
+
+  // Only ask if we haven't reached 3 times or if the user hasn't said "No"
+  if (askCount < 3 && !userSaidNo) {
+    vscode.window.showInformationMessage(
+      "Would you like to update your settings for Seed7 Code Runner support?",
+      "Yes",
+      "No"
+    ).then(answer => {
+      if (answer === "Yes") {
+        updateUserSettings();
+      }
+
+      if (answer === "No") {
+        // Save that the user said "No"
+        context.globalState.update('seed7.userSaidNo', true);
+      }
+
+      // Increment ask count
+      context.globalState.update('seed7.askCount', askCount + 1);
+    });
+  }
 
   // Register cleanup command
   const removeSettingsCommand = vscode.commands.registerCommand('seed7.removeSettings', async () => {

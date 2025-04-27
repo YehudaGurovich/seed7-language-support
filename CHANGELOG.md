@@ -48,3 +48,13 @@ All notable changes to the "Seed7" extension will be documented in this file.
 ### Quick Fix
 
 - Added the `\\b` to the regex for the keywords `not`, `and` and `or` to avoid matching other words that contain these keywords.
+
+## [0.1.2] - 2025-27-04
+
+### Quick Fix
+
+- Fixed the regex for functions declaration when the function name starts with a known keyword. 
+
+- Fixed the regex for functions declaration when the function doesn't have parameters. Now it will highlight correctly the function name.
+
+- Fixed the popup showing up every time the user works with a `sd7` or `s7i` file. Now it should only show up to 3 times if the user doesn't select `yes`. If the user selects `yes`, it will not show up again.

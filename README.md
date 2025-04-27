@@ -2,7 +2,7 @@
 
 **Seed7 Language Support** provides syntax highlighting for Seed7 code, a custom theme, and integration with Code Runner for running Seed7 files in Visual Studio Code, including support for the `.sd7` and `.s7i` file extensions.
 
-> **Current Version:** 0.1.1
+> **Current Version:** 0.1.2
 
 ## Features
 
@@ -24,6 +24,8 @@
     - `clearPreviousOutput: true`
     - `saveAllFilesBeforeRun: true`
     - `runInTerminal: true`
+
+  > :warning: If you decline, we’ll ask again only a few more times, just in case you change your mind.
 
 - **File Associations:**  
   Associates files with the `.sd7` or `.s7i` extension with the Seed7 language mode.
