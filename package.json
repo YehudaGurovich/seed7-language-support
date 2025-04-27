@@ -2,7 +2,7 @@
   "name": "seed7-language-support",
   "displayName": "Seed7 Language Support",
   "description": "Provides syntax highlighting and default theme settings for Seed7 (.sd7) files.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "YehudaGurovich",
   "engines": {
     "vscode": "^1.80.0"
