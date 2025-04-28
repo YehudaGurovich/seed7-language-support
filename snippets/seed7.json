@@ -50,12 +50,12 @@
 	"If Elsif Else Statement": {
 		"prefix": "elseif",
 		"body": [
-			"if $0 then",
-			"  $1",
-			"elsif $2 then",
-			"  $3",
-			"else",
+			"if $1 then",
+			"  $2",
+			"elsif $3 then",
 			"  $4",
+			"else",
+			"  $0",
 			"end if;"
 		],
 		"description": "If-ElseIf statement"
