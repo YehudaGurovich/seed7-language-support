@@ -1,7 +1,7 @@
 {
   "name": "seed7-language-support",
   "displayName": "Seed7 Language Support",
-  "description": "Provides syntax highlighting and default theme settings for Seed7 (.sd7) files.",
+  "description": "Provides syntax highlighting and default theme settings for Seed7 (.sd7 and .s7i) files.",
   "version": "0.1.3",
   "publisher": "YehudaGurovich",
   "engines": {
