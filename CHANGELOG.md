@@ -53,8 +53,14 @@ All notable changes to the "Seed7" extension will be documented in this file.
 
 ### Quick Fix
 
-- Fixed the regex for functions declaration when the function name starts with a known keyword. 
+- Fixed the regex for functions declaration when the function name starts with a known keyword.
 
 - Fixed the regex for functions declaration when the function doesn't have parameters. Now it will highlight correctly the function name.
 
 - Fixed the popup showing up every time the user works with a `sd7` or `s7i` file. Now it should only show up to 3 times if the user doesn't select `yes`. If the user selects `yes`, it will not show up again.
+
+## [0.1.3] - 2025-28-04
+
+### Quick Fix
+
+- Fixed the snippet for `elseif` to have the correct $0 placeholder at the end of the snippet. It was pointing to the wrong place before.
